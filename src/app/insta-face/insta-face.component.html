@@ -3,5 +3,8 @@
     <img [src]="imageUrl" [alt]="title">
     <p>{{description}}</p>
     <p>Publication publiée le : {{createdAt}}</p>
-    <p>Like : {{likes}}</p>
+    <p>
+        <button (click)="onLike()">{{aimerBouttonTexte}}</button>
+        : {{likes}}
+    </p>
 </div>
