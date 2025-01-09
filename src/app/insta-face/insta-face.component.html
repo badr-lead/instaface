@@ -1,10 +1,10 @@
 <div class="insta-face-card">
-    <h2>{{title}}</h2>
-    <img [src]="imageUrl" [alt]="title">
-    <p>{{description}}</p>
-    <p>Publication publiée le : {{createdAt}}</p>
+    <h2>{{instaFace.title}}</h2>
+    <img [src]="instaFace.imageUrl" [alt]="instaFace.title">
+    <p>{{instaFace.description}}</p>
+    <p>Publication publiée le : {{instaFace.createdAt}}</p>
     <p>
         <button (click)="onLike()">{{aimerBouttonTexte}}</button>
-        : {{likes}}
+        : {{instaFace.likes}}
     </p>
 </div>

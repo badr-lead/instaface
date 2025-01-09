@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { InstaFace } from '../models/insta-face-card';
 
 
 @Component({
@@ -9,20 +10,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './insta-face.component.scss'
 })
 export class InstaFaceComponent implements OnInit {
-  title! : string;
-  description! : string;
-  createdAt! : Date;
-  likes! : number;
-  imageUrl! : string
+  @Input() instaFace! : InstaFace
+
   aimerBouttonTexte! : string
   utilisateurDejaAime! : boolean
 
   ngOnInit(): void {
-    this.title = 'Archibald';
-    this.description = 'Mon meilleur ami depuis toujours';
-    this.createdAt = new Date();
-    this.likes = 0;
-    this.imageUrl! = 'https://picsum.photos/id/192/300/'
+
     this.aimerBouttonTexte = 'J\'aime'
     this.utilisateurDejaAime = false
   }
@@ -37,13 +31,13 @@ export class InstaFaceComponent implements OnInit {
   }
 
   dislike() {
-    this.likes--;
+    this.instaFace.removeLike();
     this.aimerBouttonTexte = 'J\'aime';
     this.utilisateurDejaAime = false
   }
 
   like() {
-    this.likes++;
+    this.instaFace.addLike();
     this.aimerBouttonTexte = 'J\'aime pas';
     this.utilisateurDejaAime = true
   }
