@@ -1,11 +1,14 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { InstaFace } from '../models/insta-face-card';
+import { NgClass } from '@angular/common';
 
 
 @Component({
   selector: 'app-insta-face',
   standalone: true,
-  imports: [],
+  imports: [
+    NgClass
+  ],
   templateUrl: './insta-face.component.html',
   styleUrl: './insta-face.component.scss'
 })

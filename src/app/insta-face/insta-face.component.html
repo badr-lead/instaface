@@ -1,5 +1,11 @@
-<div class="insta-face-card">
+<div class="insta-face-card" [ngClass]="{onAime : utilisateurDejaAime }">
     <h2>{{instaFace.title}}</h2>
+    @if (instaFace.location) {
+        <p>Localisation : {{instaFace.location}}</p>
+    }
+    @else {
+        <p>Localisation non spécifiée</p>
+    }
     <img [src]="instaFace.imageUrl" [alt]="instaFace.title">
     <p>{{instaFace.description}}</p>
     <p>Publication publiée le : {{instaFace.createdAt}}</p>
