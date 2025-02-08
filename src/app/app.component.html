@@ -1,17 +1,3 @@
-<!-- Appel à le composant insta-face 
+<app-header />
 
-Ce component, à terme, affichera un "FaceSnap" : 
-une photo partagée et quelques informations la concernant.
--->
-<!-- Depuis le component (insta-face.component.ts)
-[instaFace]
--->
-@for (instaFaceElement of instaFaces; track instaFaceElement.title) {
-    <app-insta-face [instaFace]="instaFaceElement" />
-}
-<!-- Itérer sur le tableau post dans ce template -->
-<!-- Ici on va retirer tous les instances, sauf une,
-    et autour de cette instance, on va rajouter @for, comme une boucle for 
-    
-    On aura des choses à mettre entre ces parenthèses, les accolades,
-    et on vient mettre l'instance à l'intérieur -->
+<app-face-snap-list />

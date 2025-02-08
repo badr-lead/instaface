@@ -1,5 +1,5 @@
 <div class="insta-face-card" [ngClass]="{onAime : utilisateurDejaAime }">
-    <h2>{{instaFace.title}}</h2>
+    <h2>{{instaFace.title | uppercase}}</h2>
     @if (instaFace.location) {
         <p>Localisation : {{instaFace.location}}</p>
     }
@@ -8,7 +8,7 @@
     }
     <img [src]="instaFace.imageUrl" [alt]="instaFace.title">
     <p>{{instaFace.description}}</p>
-    <p>Publication publiée le : {{instaFace.createdAt}}</p>
+    <p>Publication publiée le : {{instaFace.createdAt | date}}</p>
     <p>
         <button (click)="onLike()">{{aimerBouttonTexte}}</button>
         : {{instaFace.likes}}

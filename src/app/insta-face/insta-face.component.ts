@@ -1,13 +1,15 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { InstaFace } from '../models/insta-face-card';
-import { NgClass } from '@angular/common';
+import { DatePipe, NgClass, UpperCasePipe } from '@angular/common';
 
 
 @Component({
   selector: 'app-insta-face',
   standalone: true,
   imports: [
-    NgClass
+    NgClass,
+    UpperCasePipe,
+    DatePipe
   ],
   templateUrl: './insta-face.component.html',
   styleUrl: './insta-face.component.scss'

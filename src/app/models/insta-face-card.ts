@@ -21,6 +21,11 @@ export class InstaFace {
     // pour permettre au code qui consomme cette classe d'ajouter une localisation
     // de maniere semantique.
     setLocation(location : string): void {
-        this.location = location    
+        this.location = location
+    }
+
+    withLocation(location : string) {
+        this.setLocation(location);
+        return this;
     }
 }
